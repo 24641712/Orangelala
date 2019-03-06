@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lnu</groupId>
+    <artifactId>Orangelala</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>Orangelala-dao</module>
+        <module>Orangelala-entity</module>
+        <module>Orangelala-service</module>
+        <module>Orangelala-util</module>
+        <module>Orangelala-web</module>
+    </modules>
+    <properties>
+        <junit.version>4.11</junit.version>
+        <spring.version>4.0.2.RELEASE</spring.version>
+        <mybatis.version>3.2.6</mybatis.version>
+        <mybatis-spring>1.3.0</mybatis-spring>
+        <c3p0>0.9.5.2</c3p0>
+        <commons-logging>1.1</commons-logging>
+        <mybatis-generator-core>1.3.2</mybatis-generator-core>
+        <pagehelper>5.0.0</pagehelper>
+        <jackson>2.9.0</jackson>
+        <jstl>1.2</jstl>
+        <slf4j.version>1.7.7</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- spring核心包 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+
+
+
+
+
+
+    </dependencies>
+
+</project>
