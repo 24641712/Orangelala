@@ -1,4 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%--获取绝对路径--%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"></c:set>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -6,14 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>首页</title>
-    <link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-    <link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+    <link href="${ctx}/static/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+    <link href="${ctx}/static/assets/css/admin.css" rel="stylesheet" type="text/css" />
 
-    <link href="../basic/css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="${ctx}/static/basic/css/demo.css" rel="stylesheet" type="text/css" />
 
-    <link href="../css/hmstyle.css" rel="stylesheet" type="text/css" />
-    <script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-    <script src="../AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+    <link href="${ctx}/static/css/hmstyle.css" rel="stylesheet" type="text/css" />
+    <script src="${ctx}/static/assets/js/jquery.min.js"></script>
+    <script src="${ctx}/static/assets/js/amazeui.min.js"></script>
 
 </head>
 
