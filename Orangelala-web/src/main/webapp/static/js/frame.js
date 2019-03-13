@@ -44,11 +44,11 @@
 //                 i = 0;
 //                 break;
 //         }
-//         $("#content").load("information.ftl"); //加载相对应的内容
+//         $("#content").load("information.jsp"); //加载相对应的内容
 //         $(".userMenu li").eq(i).addClass("current").siblings().removeClass("current"); //当前列表高亮
 //     }
 //
 //     var sId ="information";
 //     loadInner(sId);
-//     $("#content").load("information.ftl");
+//     $("#content").load("information.jsp");
 // });

@@ -39,6 +39,8 @@
                 </ul>
 
                 <div class="am-tabs-bd">
+
+                    <%--邮箱注册模块--%>
                     <div class="am-tab-panel am-active">
                         <form method="post">
 
@@ -68,6 +70,7 @@
 
                     </div>
 
+                    <%--手机号注册模块--%>
                     <div class="am-tab-panel">
                         <form method="post">
                             <div class="user-phone">

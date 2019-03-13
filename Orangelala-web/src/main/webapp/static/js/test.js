@@ -1,4 +1,4 @@
 function test() {
     alert("test.js");
-    $(".tip").append("./shopping/sidebar.ftl");
+    $(".tip").append(".${ctx}/index/sidebar.jsp");
 }
