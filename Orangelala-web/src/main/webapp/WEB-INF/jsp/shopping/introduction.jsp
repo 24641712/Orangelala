@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>商品页面</title>
-
+   <link rel="icon" type="image/x-icon" href="${ctx}/static/images/favicon.ico"/>
     <link href="${ctx}/static/assets/css/admin.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/static/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/static/basic/css/demo.css" rel="stylesheet" type="text/css" />

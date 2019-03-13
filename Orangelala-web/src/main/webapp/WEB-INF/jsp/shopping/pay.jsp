@@ -10,15 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>结算页面</title>
-
+    <link rel="icon" type="image/x-icon" href="${ctx}/static/images/favicon.ico"/>
     <link href="${ctx}/static/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-
     <link href="${ctx}/static/basic/css/demo.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/static/css/cartstyle.css" rel="stylesheet" type="text/css" />
-
     <link href="${ctx}/static/css/jsstyle.css" rel="stylesheet" type="text/css" />
-
-    <script type="text/javascript" src="${ctx}/static/js/address.js"></script>
+    <script src="${ctx}/static/js/address.js" type="text/javascript"/>
 
 </head>
 

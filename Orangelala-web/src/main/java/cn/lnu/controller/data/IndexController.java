@@ -103,6 +103,13 @@ public class IndexController {
         return model;
     }
 
+    @RequestMapping("introduction")
+    public ModelAndView getIntroduction(){
+        ModelAndView model = new ModelAndView();
+        model.setViewName("/shopping/introduction");
+        return model;
+    }
+
     @RequestMapping("news")
     public ModelAndView getNews(){
         ModelAndView model = new ModelAndView();

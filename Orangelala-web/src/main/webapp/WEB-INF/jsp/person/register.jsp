@@ -8,6 +8,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>注册</title>
+    <link rel="icon" type="image/x-icon" href="${ctx}/static/images/favicon.ico"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">

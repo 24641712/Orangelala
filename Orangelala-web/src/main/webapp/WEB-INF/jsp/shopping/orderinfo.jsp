@@ -10,16 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
 
     <title>订单详情</title>
-
+    <link rel="icon" type="image/x-icon" href="${ctx}/static/images/favicon.ico"/>
     <link href="${ctx}/static/assets/css/admin.css" rel="stylesheet" type="text/css">
     <link href="${ctx}/static/assets/css/amazeui.css" rel="stylesheet" type="text/css">
-
     <link href="${ctx}/static/css/personal.css" rel="stylesheet" type="text/css">
     <link href="${ctx}/static/css/orstyle.css" rel="stylesheet" type="text/css">
-
     <script src="${ctx}/static/assets/js/jquery.min.js"></script>
     <script src="${ctx}/static/assets/js/amazeui.js"></script>
-
 
 </head>
 

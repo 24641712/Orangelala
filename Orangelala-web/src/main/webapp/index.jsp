@@ -10,11 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>首页</title>
+    <link rel="icon" type="image/x-icon" href="${ctx}/static/images/favicon.ico"/>
     <link href="${ctx}/static/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/static/assets/css/admin.css" rel="stylesheet" type="text/css" />
-
     <link href="${ctx}/static/basic/css/demo.css" rel="stylesheet" type="text/css" />
-
     <link href="${ctx}/static/css/hmstyle.css" rel="stylesheet" type="text/css" />
     <script src="${ctx}/static/assets/js/jquery.min.js"></script>
     <script src="${ctx}/static/assets/js/amazeui.min.js"></script>
@@ -41,10 +40,14 @@
                 <div class="menu-hd MyShangcheng"><a href="${ctx}/index/frame.do?name=information" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
             </div>
             <div class="topMessage mini-cart">
-                <div class="menu-hd"><a id="mc-menu-hd" href="${ctx}/index/shopcart.do" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">3</strong></a></div>
+                <div class="menu-hd"><a id="mc-menu-hd" href="${ctx}/index/shopcart.do" target="_top">
+                    <i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span>
+                    <strong id="J_MiniCartNum" class="h">3</strong></a>
+                </div>
             </div>
             <div class="topMessage favorite">
-                <div class="menu-hd"><a href="${ctx}/index/frame.do?name=collection" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
+                <div class="menu-hd"><a href="${ctx}/index/frame.do?name=collection" target="_top">
+                    <i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
         </ul>
     </div>
 
@@ -90,7 +93,7 @@
             <!--轮播 -->
             <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
                 <ul class="am-slides">
-                    <li class="banner1"><a href="introduction.html"><img src="${ctx}/static/images/ad5.jpg" /></a></li>
+                    <li class="banner1"><a href="${ctx}/index/introduction.do"><img src="${ctx}/static/images/ad5.jpg" /></a></li>
                     <li class="banner2"><a><img src="${ctx}/static/images/ad6.jpg" /></a></li>
                     <li class="banner3"><a><img src="${ctx}/static/images/ad7.jpg" /></a></li>
                     <li class="banner4"><a><img src="${ctx}/static/images/ad8.jpg" /></a></li>
@@ -1077,48 +1080,48 @@
             <div class="am-g am-g-fixed sale">
                 <div class="am-u-sm-3 sale-item">
                     <div class="s-img">
-                        <a href="${ctx}/index/introduction"><img src="${ctx}/static/images/sale3.jpg" /></a>
+                        <a href="${ctx}/index/introduction.do"><img src="${ctx}/static/images/sale3.jpg" /></a>
                     </div>
                     <div class="s-info">
-                        <a href="${ctx}/index/introduction"><p class="s-title">ZEK 原味海苔</p></a>
+                        <a href="${ctx}/index/introduction.do"><p class="s-title">ZEK 原味海苔</p></a>
                         <div class="s-price">￥<b>9.90</b>
-                            <a class="s-buy" href="${ctx}/index/introduction">秒杀</a>
+                            <a class="s-buy" href="${ctx}/index/introduction.do">秒杀</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="am-u-sm-3 sale-item">
                     <div class="s-img">
-                        <a href="${ctx}/index/introduction"><img src="${ctx}/static/images/sale2.jpg" /></a>
+                        <a href="${ctx}/index/introduction.do"><img src="${ctx}/static/images/sale2.jpg" /></a>
                     </div>
                     <div class="s-info">
-                        <a href="${ctx}/index/introduction"><p class="s-title">ZEK 原味海苔</p></a>
+                        <a href="${ctx}/index/introduction.do"><p class="s-title">ZEK 原味海苔</p></a>
                         <div class="s-price">￥<b>9.90</b>
-                            <a class="s-buy" href="${ctx}/index/introduction">秒杀</a>
+                            <a class="s-buy" href="${ctx}/index/introduction.do">秒杀</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="am-u-sm-3 sale-item">
                     <div class="s-img">
-                        <a href="${ctx}/index/introduction"><img src="${ctx}/static/images/sale1.jpg" /></a>
+                        <a href="${ctx}/index/introduction.do"><img src="${ctx}/static/images/sale1.jpg" /></a>
                     </div>
                     <div class="s-info">
-                        <a href="${ctx}/index/introduction"><p class="s-title">ZEK 原味海苔</p></a>
+                        <a href="${ctx}/index/introduction.do"><p class="s-title">ZEK 原味海苔</p></a>
                         <div class="s-price">￥<b>9.90</b>
-                            <a class="s-buy" href="${ctx}/index/introduction">秒杀</a>
+                            <a class="s-buy" href="${ctx}/index/introduction.do">秒杀</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="am-u-sm-3 sale-item">
                     <div class="s-img">
-                        <a href="${ctx}/index/introduction "><img src="${ctx}/static/images/sale2.jpg " /></a>
+                        <a href="${ctx}/index/introduction.do"><img src="${ctx}/static/images/sale2.jpg " /></a>
                     </div>
                     <div class="s-info">
-                        <a href="${ctx}/index/introduction"><p class="s-title">ZEK 原味海苔</p></a>
+                        <a href="${ctx}/index/introduction.do"><p class="s-title">ZEK 原味海苔</p></a>
                         <div class="s-price">￥<b>9.90</b>
-                            <a class="s-buy" href="${ctx}/index/introduction">秒杀</a>
+                            <a class="s-buy" href="${ctx}/index/introduction.do">秒杀</a>
                         </div>
                     </div>
                 </div>
@@ -1175,7 +1178,7 @@
                 <div class="am-u-sm-7 am-u-md-5 am-u-lg-2 text-two big">
 
                     <div class="outer-con ">
-                        <a href="${ctx}/index/introduction"><div class="title ">
+                        <a href="${ctx}/index/introduction.do"><div class="title ">
                             雪之恋和风大福
                         </div></a>
                         <div class="sub-title ">
@@ -1183,11 +1186,11 @@
                         </div>
 
                     </div>
-                    <a href="${ctx}/index/introduction "><img src="${ctx}/static/images/act1.png" /></a>
+                    <a href="${ctx}/index/introduction.do"><img src="${ctx}/static/images/act1.png" /></a>
                 </div>
 
                 <li>
-                    <a href="${ctx}/index/introduction">
+                    <a href="${ctx}/index/introduction.do">
                         <div class="am-u-md-2 am-u-lg-2 text-three">
                             <div class="boxLi"></div>
                             <div class="outer-con ">
@@ -1205,7 +1208,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="${ctx}/index/introduction">
+                    <a href="${ctx}/index/introduction.do">
                         <div class="am-u-md-2 am-u-lg-2 text-three sug">
                             <div class="boxLi"></div>
                             <div class="outer-con ">
@@ -1222,7 +1225,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="${ctx}/index/introduction">
+                    <a href="${ctx}/index/introduction.do">
                         <div class="am-u-sm-4 am-u-md-5 am-u-lg-4 text-five">
                             <div class="boxLi"></div>
                             <div class="outer-con ">
@@ -1239,7 +1242,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="${ctx}/index/introduction">
+                    <a href="${ctx}/index/introduction.do">
                         <div class="am-u-sm-4 am-u-md-2 am-u-lg-2 text-six">
                             <div class="boxLi"></div>
                             <div class="outer-con ">
@@ -1256,7 +1259,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="${ctx}/index/introduction">
+                    <a href="${ctx}/index/introduction.do">
                         <div class="am-u-sm-4 am-u-md-2 am-u-lg-4 text-six">
                             <div class="boxLi"></div>
                             <div class="outer-con ">

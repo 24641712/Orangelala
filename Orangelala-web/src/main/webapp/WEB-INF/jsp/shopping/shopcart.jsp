@@ -10,12 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>购物车页面</title>
-
+    <link rel="icon" type="image/x-icon" href="${ctx}/static/images/favicon.ico"/>
     <link href="${ctx}/static/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/static/basic/css/demo.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/static/css/cartstyle.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/static/css/optstyle.css" rel="stylesheet" type="text/css" />
-
     <script type="text/javascript" src="${ctx}/static/js/jquery.js"></script>
 
 </head>
@@ -27,23 +26,31 @@
     <ul class="message-l">
         <div class="topMessage">
             <div class="menu-hd">
-                <a href="#" target="_top" class="h">亲，请登录</a>
-                <a href="#" target="_top">免费注册</a>
+                <a href="${ctx}/index/login.do" target="_top" class="h">亲，请登录</a>
+                <a href="${ctx}/index/register.do" target="_top">免费注册</a>
             </div>
         </div>
     </ul>
     <ul class="message-r">
         <div class="topMessage home">
-            <div class="menu-hd"><a href="#" target="_top" class="h">商城首页</a></div>
+            <div class="menu-hd"><a href="${ctx}/index.jsp" target="_top" class="h">商城首页</a></div>
         </div>
         <div class="topMessage my-shangcheng">
-            <div class="menu-hd MyShangcheng"><a href="#" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+            <div class="menu-hd MyShangcheng">
+                <a href="${ctx}/index/frame.do?name=information" target="_top">
+                <i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
         </div>
         <div class="topMessage mini-cart">
-            <div class="menu-hd"><a id="mc-menu-hd" href="#" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
+            <div class="menu-hd">
+                <a id="mc-menu-hd" href="${ctx}/index/shopcart.do" target="_top">
+                    <i class="am-icon-shopping-cart  am-icon-fw">
+                    </i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong>
+                </a></div>
         </div>
         <div class="topMessage favorite">
-            <div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
+            <div class="menu-hd"><a href="${ctx}/index/frame.do?name=collection" target="_top">
+                <i class="am-icon-heart am-icon-fw"></i>
+                <span>收藏夹</span></a></div>
     </ul>
 </div>
 
