@@ -7,26 +7,40 @@ package cn.lnu.entity;
  */
 public class User {
 
-    private String id;
+    private long id;
 
-    private String name;
+    private String username;
 
     private String password;
 
-    public String getId() {
+    public User() {
+    }
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public User(long id, String username, String password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -40,7 +54,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "name='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
