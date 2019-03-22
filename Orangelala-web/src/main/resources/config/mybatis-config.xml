@@ -6,6 +6,7 @@
 
     <typeAliases>
         <package name="cn.lnu.entity"/>
+        <package name="cn.lnu.util"/>
     </typeAliases>
     <!--<plugins>-->
         <!--<plugin interceptor="com.github.pagehelper.PageHelper">-->
