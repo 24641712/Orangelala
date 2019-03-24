@@ -1,5 +1,6 @@
 package cn.lnu.dao.user;
 
+import cn.lnu.entity.TbUser;
 import cn.lnu.entity.User;
 
 import java.util.List;
@@ -21,5 +22,7 @@ public interface UserDao {
     public int deleteUser(Long id);
 
     public User fingUserById(Long id);
+
+
 
 }

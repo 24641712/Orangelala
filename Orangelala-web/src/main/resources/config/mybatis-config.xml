@@ -3,7 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
+    <!--别名设置，扫描的是pojo的类-->
+    <!--批量设置方式-->
     <typeAliases>
         <package name="cn.lnu.entity"/>
         <package name="cn.lnu.util"/>

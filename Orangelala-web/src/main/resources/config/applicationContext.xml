@@ -22,7 +22,7 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
-    <!--自动将Controller层注入-->
+    <!--自动将dao层注入-->
     <context:component-scan base-package="cn.lnu.dao"/>
 
     <context:component-scan base-package="cn.lnu.util"/>
@@ -149,8 +149,9 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <!--切入点表达式-->
+
     <aop:config>
+        <!--切入点表达式-->
         <aop:pointcut id="pc" expression="execution(public * cn.lnu.service.*.*(..))"/>
         <!--把事务控制在Service层-->
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pc"/>

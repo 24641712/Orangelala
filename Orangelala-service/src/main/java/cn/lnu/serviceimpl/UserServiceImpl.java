@@ -1,5 +1,7 @@
 package cn.lnu.serviceimpl;
 
+import cn.lnu.dao.user.TbUserDao;
+import cn.lnu.entity.TbUser;
 import cn.lnu.service.userservice.UserService;
 import cn.lnu.util.email.CodeUtil;
 import cn.lnu.util.email.SendEmailUtil;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import javax.mail.MessagingException;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * 用户逻辑控制实现类
@@ -18,9 +21,17 @@ import java.io.IOException;
 @Service("userService")
 public class UserServiceImpl implements UserService {
     @Resource
-    SendEmailUtil sendEmailUtil;
+    private SendEmailUtil sendEmailUtil;
+
+    @Resource
+    private TbUserDao tbUserDao;
 
 
+     /*
+      *发送验证连接到指定邮箱
+      * @param null
+      * @return
+      */
     @Override
     public void sendEmail() {
         String toEmail = "ccl1712@163.com";
@@ -36,8 +47,16 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    @Override
+    public List<TbUser> findAllTbUsers() {
 
+        return tbUserDao.findAllTbUsers();
+    }
 
+    @Override
+    public int addTbUser(TbUser tbUser) {
+        return tbUserDao.addTbUsers(tbUser);
+    }
 
 
 }
