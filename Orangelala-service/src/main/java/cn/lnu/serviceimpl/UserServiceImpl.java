@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * 用户逻辑控制实现类
+ * 实现用户的添加和修改功能
  * @Author：ccl
  * @Date：19-3-22 下午9:12
  */
@@ -56,6 +57,21 @@ public class UserServiceImpl implements UserService {
     @Override
     public int addTbUser(TbUser tbUser) {
         return tbUserDao.addTbUsers(tbUser);
+    }
+
+    @Override
+    public TbUser findTbUserById(Long id) {
+        return tbUserDao.findTbUserById(id);
+    }
+
+    @Override
+    public int updateTbUser(TbUser tbUser) {
+        return tbUserDao.updateTbUser(tbUser);
+    }
+
+    @Override
+    public int deleteTbUser(Long id) {
+        return tbUserDao.deleteTbUser(id);
     }
 
 

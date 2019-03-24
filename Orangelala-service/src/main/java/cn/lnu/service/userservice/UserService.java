@@ -18,6 +18,11 @@ public interface UserService {
 
     public int  addTbUser(TbUser tbUser);
 
+    public TbUser findTbUserById(Long id);
+
+    public int updateTbUser(TbUser tbUser);
+
+    public int deleteTbUser(Long id);
 
 
 }

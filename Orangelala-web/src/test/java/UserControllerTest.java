@@ -93,6 +93,12 @@ public class UserControllerTest {
     }
 
     @Test
+    public void findTbUserById(){
+        TbUser tbUser = userService.findTbUserById(4L);
+        System.out.println(tbUser.toString());
+    }
+
+    @Test
     public void addTbUser(){
         TbUser tbUser = new TbUser();
         tbUser.setId(5L);
@@ -112,6 +118,41 @@ public class UserControllerTest {
         }
         userService.addTbUser(tbUser);
     }
+
+    @Test
+   public void updateTbUser(){
+       TbUser tbUser = new TbUser();
+       tbUser.setId(5L);
+       tbUser.setUsername("6");
+       tbUser.setPassword("6");
+       tbUser.setPhone("6");
+       tbUser.setEmail("6");
+       String strdate1="2019-05-18";
+       String strdate2="2019-05-27";
+       SimpleDateFormat  sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+       try {
+           tbUser.setCreated(sdf.parse(strdate1));
+           tbUser.setUpdated(sdf.parse(strdate2));
+       } catch (ParseException e) {
+           e.printStackTrace();
+       }
+       userService.updateTbUser(tbUser);
+   }
+
+   @Test
+    public void deleteTbUser(){
+        int result = userService.deleteTbUser(5L);
+        if(result == 1){
+            System.out.println("用户删除成功");
+        }else{
+            System.out.println("用户删除失败");
+        }
+
+   }
+
+
+
 
 
 

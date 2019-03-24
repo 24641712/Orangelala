@@ -20,25 +20,34 @@
        from tb_user;
   </select>
 
+  <!--根据用户id查寻用户信息-->
+  <select id="findTbUserById" parameterType="Long" resultMap="TbUserResult">
+    select id,username,password,phone,email,created,updated
+    from tb_user
+    where id=#{id}
+  </select>
+
+
   <!--添加用户数据-->
   <insert id="addTbUsers" parameterType="TbUser">
-    insert into tb_user values(#{id},#{username},#{password},#{phone},#{email},#{created},#{updated});
+    insert into tb_user
+    values(#{id},#{username},#{password},#{phone},#{email},#{created},#{updated});
   </insert>
 
-  <!--&lt;!&ndash;修改用户信息&ndash;&gt;-->
-  <!--<update id="updateUser" parameterType="User">-->
-    <!--update users set username=#{username},password=#{password} where id=#{id}-->
-  <!--</update>-->
+  <!--修改用户信息-->
+  <update id="updateTbUser" parameterType="TbUser">
+    update tb_user
+    set username=#{username},password=#{password},phone=#{phone},email=#{email},created=#{created},updated=#{updated}
+    where id=#{id}
+  </update>
 
-  <!--&lt;!&ndash;删除用户&ndash;&gt;-->
-  <!--<delete id="deleteUser" parameterType="Long">-->
-    <!--delete from users where id=#{id}-->
-  <!--</delete>-->
+  <!--删除用户-->
+  <delete id="deleteTbUser" parameterType="Long">
+    delete from tb_user
+    where id=#{id}
+  </delete>
 
-  <!--&lt;!&ndash;根据用户id查寻用户信息&ndash;&gt;-->
-  <!--<select id="fingUserById" parameterType="Long" resultMap="UserResult">-->
-    <!--select * from users where id=#{id}-->
-  <!--</select>-->
+
 
 
 
