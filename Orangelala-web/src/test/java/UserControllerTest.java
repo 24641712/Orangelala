@@ -2,6 +2,7 @@ import cn.lnu.entity.TbUser;
 import cn.lnu.entity.User;
 import cn.lnu.service.IndexService.IndexService;
 import cn.lnu.service.userservice.UserService;
+import cn.lnu.util.FastDFSClient;
 import cn.lnu.util.FormatDate;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,6 +30,8 @@ public class UserControllerTest {
 
     @Autowired
     private UserService userService;
+
+    private FastDFSClient fastDFSClient = new FastDFSClient("hello");
 
 
     @Test
@@ -119,8 +122,13 @@ public class UserControllerTest {
         userService.addTbUser(tbUser);
     }
 
-    @Test
+   @Test
    public void updateTbUser(){
+         /*
+          *修改用户数据
+          * @param
+          * @return void
+          */
        TbUser tbUser = new TbUser();
        tbUser.setId(5L);
        tbUser.setUsername("6");
@@ -130,7 +138,6 @@ public class UserControllerTest {
        String strdate1="2019-05-18";
        String strdate2="2019-05-27";
        SimpleDateFormat  sdf = new SimpleDateFormat("yyyy-MM-dd");
-
        try {
            tbUser.setCreated(sdf.parse(strdate1));
            tbUser.setUpdated(sdf.parse(strdate2));
@@ -150,6 +157,29 @@ public class UserControllerTest {
         }
 
    }
+
+   @Test
+    public void testUploadFile(){
+
+       String local = "/home/test.txt";
+       fastDFSClient.testUpload(local);
+
+   }
+
+    @Test
+    public void testDownLoad(){
+       fastDFSClient.testDownload();
+    }
+
+    @Test
+    public void testDelete(){
+        fastDFSClient.testDelete();
+    }
+
+    @Test
+    public void testGetFileInfo(){
+        fastDFSClient.testGetFileInfo();
+    }
 
 
 
