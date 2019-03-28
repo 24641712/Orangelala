@@ -7,6 +7,7 @@ import cn.lnu.util.FormatDate;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -30,6 +31,9 @@ public class UserControllerTest {
 
     @Autowired
     private UserService userService;
+
+    @Value("${mail.smtp.host}")
+    private String str;
 
     private FastDFSClient fastDFSClient = new FastDFSClient("hello");
 
@@ -181,6 +185,10 @@ public class UserControllerTest {
         fastDFSClient.testGetFileInfo();
     }
 
+    @Test
+    public void test(){
+        System.out.println(str);
+    }
 
 
 

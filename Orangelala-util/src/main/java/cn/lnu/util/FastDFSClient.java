@@ -20,6 +20,7 @@ public class FastDFSClient {
     private TrackerServer trackerServer = null;
     private StorageServer storageServer = null;
     private StorageClient1 storageClient = null;
+    private String file_id = "group1/M00/00/00/rBD8Q1ybc6WAJk7NAAABn89iab4816.txt";
 
      /*
       *构造函数
@@ -35,7 +36,7 @@ public class FastDFSClient {
 //        }
         //初始化配置文件
         try {
-            ClientGlobal.init("/home/fdfs_client.conf");
+            ClientGlobal.init("/home/fdfs_client.properties");
             // 创建跟踪器客户端对象
             trackerClient = new TrackerClient();
             // 获取跟踪器连接
@@ -74,7 +75,7 @@ public class FastDFSClient {
     public void testDownload() {
         try {
               // 根据文件标识下载文件
-             byte[] by = storageClient.download_file1("group1/M00/00/00/rBD8Q1ybYfOAQFQKAAABn89iab4615.txt");
+             byte[] by = storageClient.download_file1(file_id);
              // 将数据写入输出流
             IOUtils.write(by, new FileOutputStream("/home/download.txt"));
             } catch (Exception e) {
@@ -91,7 +92,7 @@ public class FastDFSClient {
        // 根据文件标识删除文件，返回0则删除成功
        int i = 0;
        try {
-           i = storageClient.delete_file1("group1/M00/00/00/rBD8Q1ybYfOAQFQKAAABn89iab4615.txt");
+           i = storageClient.delete_file1(file_id);
            if (i == 0) {
                System.out.println("删除成功");
            } else {
@@ -106,7 +107,7 @@ public class FastDFSClient {
        // 根据文件标识获取文件信息
        FileInfo fileInfo = null;
        try {
-           fileInfo = storageClient.get_file_info1("group1/M00/00/00/rBD8Q1ybYfOAQFQKAAABn89iab4615.txt");
+           fileInfo = storageClient.get_file_info1(file_id);
            // 文件IP地址
            System.out.println(fileInfo.getSourceIpAddr());
            // 文件大小
