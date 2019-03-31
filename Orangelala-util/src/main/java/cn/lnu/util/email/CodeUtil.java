@@ -3,9 +3,9 @@ package cn.lnu.util.email;
 import java.util.UUID;
 
 /**
- * Created by CCL on 2018/11/18 0018 上午 8:57
- *
- * @description:
+ * 工具类 生成唯一激活码
+ * @Author ccl
+ * @Date 2018/11/18 0018 上午 8:57
  */
 public class CodeUtil {
     //生成唯一的激活码

@@ -1,4 +1,4 @@
-package cn.lnu.util;
+package cn.lnu.util.email;
 
 /**
  * Created by CCL on 2018/10/31 0031 下午 5:28

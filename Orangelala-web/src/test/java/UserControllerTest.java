@@ -1,9 +1,10 @@
+import cn.lnu.util.redis.RedisEntity;
 import cn.lnu.entity.TbUser;
 import cn.lnu.entity.User;
 import cn.lnu.service.IndexService.IndexService;
 import cn.lnu.service.userservice.UserService;
-import cn.lnu.util.FastDFSClient;
-import cn.lnu.util.FormatDate;
+import cn.lnu.util.fastdfs.FastDFSClient;
+import cn.lnu.util.redis.RedisCache;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -32,8 +33,14 @@ public class UserControllerTest {
     @Autowired
     private UserService userService;
 
-    @Value("${mail.smtp.host}")
+    @Value("${redis.password}")
     private String str;
+
+    @Autowired
+    private RedisCache redisCache;
+
+    @Autowired
+    private RedisEntity redisEntity;
 
     private FastDFSClient fastDFSClient = new FastDFSClient("hello");
 
@@ -187,10 +194,56 @@ public class UserControllerTest {
 
     @Test
     public void test(){
-        System.out.println(str);
+        System.out.println(redisEntity.getPassword());
     }
 
+    @Test
+    public void insertTbUserBatch(){
+        TbUser tbUser = new TbUser();
+        tbUser.setId(11L);
+        tbUser.setUsername("11");
+        tbUser.setPassword("11");
+        tbUser.setPhone("11");
+        tbUser.setEmail("11");
+        String strdate1="2011-05-17";
+        String strdate2="2011-05-28";
+        SimpleDateFormat  sdf = new SimpleDateFormat("yyyy-MM-dd");
 
+        try {
+            tbUser.setCreated(sdf.parse(strdate1));
+            tbUser.setUpdated(sdf.parse(strdate2));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        TbUser tbUser1 = new TbUser();
+        tbUser1.setId(12L);
+        tbUser1.setUsername("12");
+        tbUser1.setPassword("12");
+        tbUser1.setPhone("12");
+        tbUser1.setEmail("12");
+        String strdate11="2022-05-17";
+        String strdate21="2022-05-28";
+        SimpleDateFormat  sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+
+        try {
+            tbUser1.setCreated(sdf1.parse(strdate11));
+            tbUser1.setUpdated(sdf1.parse(strdate21));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        List<TbUser> list = new ArrayList<TbUser>();
+        list.add(tbUser);
+        list.add(tbUser1);
+        int result = userService.insertTbUserBatch(list);
+        if(result == list.size()){
+            System.out.println("批量插入成功");
+        }else{
+            System.out.println("批量插入失败");
+        }
+
+    }
 
 
 

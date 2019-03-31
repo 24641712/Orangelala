@@ -74,5 +74,10 @@ public class UserServiceImpl implements UserService {
         return tbUserDao.deleteTbUser(id);
     }
 
+    @Override
+    public int insertTbUserBatch(List<TbUser> tbUserList) {
+        return tbUserDao.insertTbUserBatch(tbUserList);
+    }
+
 
 }

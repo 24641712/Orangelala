@@ -21,4 +21,7 @@ public interface TbUserDao {
 
     public int deleteTbUser(Long id);
 
+    //批量插入数据
+    public int insertTbUserBatch(List<TbUser > tbUserList);
+
 }

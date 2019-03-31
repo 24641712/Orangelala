@@ -1,26 +1,26 @@
-package cn.lnu.util;
+package cn.lnu.util.fastdfs;
 
 import org.apache.commons.io.IOUtils;
 import org.csource.common.MyException;
 import org.csource.fastdfs.*;
-import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.URLDecoder;
+import java.io.Serializable;
 
 /**
  * FastDFS工具类［实现文件上传，下载，删除，查询］
  * @Author：ccl
  * @Date：19-3-27 下午2:40
  */
-public class FastDFSClient {
+public class FastDFSClient implements Serializable {
 
     private TrackerClient trackerClient = null;
     private TrackerServer trackerServer = null;
     private StorageServer storageServer = null;
     private StorageClient1 storageClient = null;
-    private String file_id = "group1/M00/00/00/rBD8Q1ybc6WAJk7NAAABn89iab4816.txt";
+    private String file_id = "group1/M00/00/00/rBD8Q1yc1oyAWLVxAAABn89iab4729.txt";
 
      /*
       *构造函数
@@ -29,14 +29,12 @@ public class FastDFSClient {
       * @return
       */
     public FastDFSClient(String conf){
-//        if (conf.contains("classpath:")) {
-//            String path = URLDecoder.decode(getClass().getProtectionDomain().getCodeSource().getLocation().toString(),"UTF-8");
-//            path=path.substring(6);
-//            conf = conf.replace("classpath:",URLDecoder.decode(path,"UTF-8"));
-//        }
         //初始化配置文件
         try {
-            ClientGlobal.init("/home/fdfs_client.properties");
+            String classPath = new File(FastDFSClient.class.getResource("/config").getFile()).getCanonicalPath();
+            String fdfsClientConfigFilePath = classPath + File.separator + "fdfs_client.properties";
+
+            ClientGlobal.init(fdfsClientConfigFilePath);
             // 创建跟踪器客户端对象
             trackerClient = new TrackerClient();
             // 获取跟踪器连接
@@ -103,6 +101,11 @@ public class FastDFSClient {
        }
    }
 
+    /*
+     *查看文件信息
+     * @param null
+     * @return
+     */
    public void testGetFileInfo(){
        // 根据文件标识获取文件信息
        FileInfo fileInfo = null;
@@ -123,7 +126,19 @@ public class FastDFSClient {
        }
    }
 
+  public void test(){
+      String classPath = null;
+      try {
+          classPath = new File(FastDFSClient.class.getResource("/config").getFile()).getCanonicalPath();
+          String fdfsClientConfigFilePath = classPath + File.separator + "fdfs_client.properties";
+          System.out.println(fdfsClientConfigFilePath);
 
+      } catch (Exception e) {
+          e.printStackTrace();
+      }
+
+
+  }
 
 
 

@@ -2,8 +2,11 @@ package cn.lnu.controller.user;
 
 import cn.lnu.entity.User;
 import cn.lnu.service.IndexService.IndexService;
+import cn.lnu.util.redis.cache.GetCache;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
@@ -46,6 +49,21 @@ public class UserController {
             System.out.println(user.toString());
 
         }
+    }
+
+    /*
+     *使用redis实现缓存功能，提高查询效率
+     *@return
+     **/
+    @GetCache(name="room",value="id")
+    @ResponseBody
+    @RequestMapping("/zhujie")
+    public Object getFastDFS(String id,String name){
+        System.out.println("id = "+id+" name = "+name);
+        System.out.println("已查询到数据，准备缓存到redis..."+
+                indexService.findUserById(2L).getUsername());
+        System.out.println();
+        return indexService.findUserById(2L);
 
     }
 

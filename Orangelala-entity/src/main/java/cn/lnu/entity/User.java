@@ -1,11 +1,13 @@
 package cn.lnu.entity;
 
+import java.io.Serializable;
+
 /**
  * 用户实体类
  * @Author： ccl
  * @Date：19-3-10
  */
-public class User {
+public class User implements Serializable {
 
     private long id;
 

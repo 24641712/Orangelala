@@ -34,6 +34,23 @@
     values(#{id},#{username},#{password},#{phone},#{email},#{created},#{updated});
   </insert>
 
+  <!--批量添加用户代码-->
+  <insert id ="insertTbUserBatch" parameterType="java.util.List" >
+     insert into tb_user
+     (id,username, password, phone,email,created,updated)
+     values
+     <foreach collection ="list" item="tbUser" separator =",">
+         (
+         #{tbUser.id}, #{tbUser.username},
+         #{tbUser.password},#{tbUser.phone},
+         #{tbUser.email}, #{tbUser.created},
+         #{tbUser.updated}
+     )
+    </foreach >
+
+
+  </insert>
+
   <!--修改用户信息-->
   <update id="updateTbUser" parameterType="TbUser">
     update tb_user

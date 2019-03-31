@@ -24,5 +24,7 @@ public interface UserService {
 
     public int deleteTbUser(Long id);
 
+    public int insertTbUserBatch(List<TbUser> tbUserList);
+
 
 }

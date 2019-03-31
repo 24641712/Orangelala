@@ -1,7 +1,7 @@
 package cn.lnu.util.email;
 
-import cn.lnu.util.Email_Authenticator;
 import org.springframework.stereotype.Component;
+
 
 import javax.mail.*;
 import javax.mail.internet.*;
@@ -14,9 +14,16 @@ import java.util.Properties;
  * @Author：ccl
  * @Date：19-3-22 下午9:06
  */
-@Component//将工具类注入spring容器中
+//@Component 将工具类注入spring容器中
+@Component
 public class SendEmailUtil {
 
+     /*
+      *发送邮件
+      * @param toEmail 目的地
+      * @param code 唯一激活码
+      * @return
+      */
     public int send_email(String toEmail,String code) throws IOException, AddressException, MessagingException{
 
         String to = toEmail;
@@ -32,10 +39,14 @@ public class SendEmailUtil {
 
         //发送者的邮箱和授权码
         Authenticator authenticator = new Email_Authenticator("2464171268@qq.com", "pchfwcnialuudjab");
-        javax.mail.Session sendMailSession = javax.mail.Session.getDefaultInstance(properties, authenticator);
+        Session sendMailSession = javax.mail.Session.getDefaultInstance(properties, authenticator);
         MimeMessage mailMessage = new MimeMessage(sendMailSession);
         //邮箱的发送者
-        mailMessage.setFrom(new InternetAddress("2464171268@qq.com"));
+        try {
+            mailMessage.setFrom(new InternetAddress("2464171268@qq.com"));
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
 
         //邮箱接收
         // Message.RecipientType.TO属性表示接收者的类型为TO
