@@ -20,7 +20,7 @@ public class FastDFSClient implements Serializable {
     private TrackerServer trackerServer = null;
     private StorageServer storageServer = null;
     private StorageClient1 storageClient = null;
-    private String file_id = "group1/M00/00/00/rBD8Q1yc1oyAWLVxAAABn89iab4729.txt";
+    private String file_id = "group1/M00/00/00/rBD8Q1ysPGiAPcNOAAABn89iab4842.txt";
 
      /*
       *构造函数

@@ -55,7 +55,7 @@ public class UserControllerTest {
 
     @Test
     public void AddUser(){
-        User user = new User(12L,"66","66");
+        User user = new User(14L,"66","66");
         int result = indexService.addUser(user);
         if(result == 1){
             System.out.println("插入成功");
