@@ -33,21 +33,21 @@
 
     <!--读取jdbc配置文件-->
     <!--不添加ignore-unresolvable="true"属性，后边redis配置文件无法正常读取-->
-    <context:property-placeholder location="classpath:config/jdbc.properties"
+    <context:property-placeholder location="classpath:config/online/jdbc.properties"
                                   ignore-unresolvable="true"/>
 
-    <context:property-placeholder location="classpath:config/fdfs_client.properties"
+    <context:property-placeholder location="classpath:config/online/fdfs_client.properties"
                                   ignore-unresolvable="true"/>
 
     <bean id="redisCache" class="cn.lnu.util.redis.RedisCache"></bean>
 
     <!--读取redis配置文件-->
-    <context:property-placeholder location="classpath:config/redis.properties"/>
+    <context:property-placeholder location="classpath:config/online/redis.properties"/>
 
     <bean id="prop" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="locations">
             <list>
-                <value>classpath:config/redis.properties</value>
+                <value>classpath:config/online/redis.properties</value>
             </list>
         </property>
         <property name="fileEncoding" value="UTF-8"/>

@@ -348,4 +348,25 @@
 
     </dependencyManagement>
 
+    <profiles>
+        <profile>
+            <!--开发环境-->
+            <id>dev</id>
+            <properties>
+                <env>dev</env>
+            </properties>
+            <activation>
+                 <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <!--发布环境-->
+            <id>prd</id>
+            <properties>
+                <env>prd</env>
+            </properties>
+        </profile>
+    </profiles>
+
+
 </project>
