@@ -25,6 +25,10 @@ public class DataController {
         ModelAndView model = new ModelAndView();
         List<TbItem> list = indexService.fingAllTbItem();
         System.out.println("获取后台数据");
+        System.out.println("合并分支1");
+        System.out.println("");
+        System.out.println("程闯亮");
+        System.out.println("主分支修改");
         return list;
     }
 
