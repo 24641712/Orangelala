@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%--获取绝对路径--%>
 <c:set var="ctx" value="${pageContext.request.contextPath}"></c:set>
+<c:set var="imgpath" value="120.77.37.145"></c:set>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,9 +16,6 @@
     <link href="${ctx}/static/assets/css/admin.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/static/basic/css/demo.css" rel="stylesheet" type="text/css" />
     <link href="${ctx}/static/css/hmstyle.css" rel="stylesheet" type="text/css" />
-    <script src="${ctx}/static/assets/js/jquery.min.js"></script>
-    <script src="${ctx}/static/assets/js/amazeui.min.js"></script>
-
 </head>
 
 <body>
@@ -2168,6 +2166,10 @@
     window.jQuery || document.write('<script src="${ctx}/static/basic/js/jquery-1.7.2.min.js"><\/script>');
 </script>
 <script type="text/javascript " src="${ctx}/static/basic/js/quick_links.js "></script>
+<script src="${ctx}/static/assets/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+<script src="${ctx}/static/assets/js/amazeui.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/myjs/index.js"></script>
 </body>
 
 </html>

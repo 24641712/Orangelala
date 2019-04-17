@@ -1,5 +1,6 @@
 package cn.lnu.service.IndexService;
 
+import cn.lnu.entity.TbItem;
 import cn.lnu.entity.User;
 
 import java.util.List;
@@ -11,16 +12,9 @@ import java.util.List;
  */
 public interface IndexService {
 
-    public List<User> finAllUsers();
+    public List<TbItem> fingAllTbItem();
 
-    public int addUser(User user);
-
-    public int updateUser(User user);
-
-    public User findUserById(Long id);
-
-    public int deleteUsers(Long id);
-
+    public List<TbItem> fingAllTbItemInfo();
 
 
 

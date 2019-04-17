@@ -159,5 +159,12 @@ public class IndexController {
         return model;
     }
 
+    @RequestMapping("test")
+    public ModelAndView getTest(){
+        ModelAndView model = new ModelAndView();
+        model.setViewName("/shopping/test");
+        return model;
+    }
+
 
 }

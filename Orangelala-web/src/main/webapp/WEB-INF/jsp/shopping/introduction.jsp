@@ -24,6 +24,8 @@
     <script type="text/javascript" src="${ctx}/static/js/jquery.imagezoom.min.js"></script>
     <script type="text/javascript" src="${ctx}/static/js/jquery.flexslider.js"></script>
     <script type="text/javascript" src="${ctx}/static/js/list.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+    <script type="text/javascript" src="${ctx}/static/myjs/test.js"></script>
 
 </head>
 
@@ -34,12 +36,21 @@
 <div class="am-container header">
     <ul class="message-l">
         <div class="topMessage">
-            <div class="menu-hd">
+            <div class="menu-hd" id="app">
                 <a href="#" target="_top" class="h">亲，请登录</a>
+                <a href="#">{{ message }}</a>
                 <a href="#" target="_top">免费注册</a>
             </div>
         </div>
     </ul>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!'
+            }
+        })
+    </script>
     <ul class="message-r">
         <div class="topMessage home">
             <div class="menu-hd"><a href="#" target="_top" class="h">商城首页</a></div>
@@ -334,7 +345,7 @@
     </li>
     <li>
         <div class="clearfix tb-btn tb-btn-basket theme-login">
-            <a id="LikBasket" title="加入购物车" href="#"><i></i>加入购物车</a>
+            <a id="LikBasket" title="加入购物车" href="${ctx}/index/test.do"><i></i>加入购物车</a>
         </div>
     </li>
 </div>

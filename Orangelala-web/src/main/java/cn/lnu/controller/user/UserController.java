@@ -39,33 +39,22 @@ public class UserController {
         return model;
     }
 
-    @RequestMapping("/find")
-    public void getAllUsers(){
-
-        List<User> results = null;
-        results = indexService.finAllUsers();
-        ModelAndView model = new ModelAndView();
-        for (User user:results){
-            System.out.println(user.toString());
-
-        }
-    }
 
     /*
      *使用redis实现缓存功能，提高查询效率
      *@return
      **/
-    @GetCache(name="room",value="id")
-    @ResponseBody
-    @RequestMapping("/zhujie")
-    public Object getFastDFS(String id,String name){
-        System.out.println("id = "+id+" name = "+name);
-        System.out.println("已查询到数据，准备缓存到redis..."+
-                indexService.findUserById(2L).getUsername());
-        System.out.println();
-        return indexService.findUserById(2L);
-
-    }
+//    @GetCache(name="room",value="id")
+//    @ResponseBody
+//    @RequestMapping("/zhujie")
+//    public Object getFastDFS(String id,String name){
+//        System.out.println("id = "+id+" name = "+name);
+//        System.out.println("已查询到数据，准备缓存到redis..."+
+//                indexService.findUserById(2L).getUsername());
+//        System.out.println();
+//        return indexService.findUserById(2L);
+//
+//    }
 
 
 
