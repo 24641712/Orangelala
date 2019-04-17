@@ -43,6 +43,10 @@ public class DataController {
         System.out.println("C");
     }
 
+    public void F(){
+        System.out.println("F");
+    }
+
 
 
 
