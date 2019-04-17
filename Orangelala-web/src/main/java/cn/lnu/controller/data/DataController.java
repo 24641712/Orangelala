@@ -33,6 +33,10 @@ public class DataController {
         return list;
     }
 
+    public void B(){
+        System.out.println("B");
+    }
+
 
 
 
