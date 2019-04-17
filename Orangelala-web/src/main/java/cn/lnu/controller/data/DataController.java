@@ -25,7 +25,7 @@ public class DataController {
         ModelAndView model = new ModelAndView();
         List<TbItem> list = indexService.fingAllTbItem();
         System.out.println("获取后台数据");
-        System.out.println("启动后台文件");
+        System.out.println("x修改后台文件");
         return list;
     }
 
