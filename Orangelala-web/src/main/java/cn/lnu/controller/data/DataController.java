@@ -33,7 +33,7 @@ public class DataController {
         return list;
     }
 
-    public void A(){
+    public void B(){
         System.out.println("A");
     }
 
