@@ -36,22 +36,6 @@ public class DataController {
     public void A(){
         System.out.println("A");
     }
-    public void B(){
-        System.out.println("B");
-    }
-    public void C(){
-        System.out.println("C");
-    }
-    public void D(){
-        System.out.println("D");
-    }
-    public void E() {
-        System.out.println("E");
-    }
-
-    public void F(){
-        System.out.println("F");
-    }
 
 
 
