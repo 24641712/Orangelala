@@ -45,8 +45,9 @@ public class DataController {
     public void D(){
         System.out.println("D");
     }
-    public void E(){
+    public void E() {
         System.out.println("E");
+    }
 
     public void F(){
         System.out.println("F");
