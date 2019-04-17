@@ -24,6 +24,7 @@ public class DataController {
     public List<TbItem> getAllTbItem(){
         ModelAndView model = new ModelAndView();
         List<TbItem> list = indexService.fingAllTbItem();
+        System.out.println("获取后台数据");
         return list;
     }
 

@@ -12,7 +12,8 @@ $(document).ready(function() {
               str += list[i].price;
               str += list[i].image;
           }
-
+          $("#reply").append("我在尝试");
+          alert("走到这里了");
         },
         error:function () {
             alert("出错了");
